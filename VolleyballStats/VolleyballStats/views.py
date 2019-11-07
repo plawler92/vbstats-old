@@ -42,14 +42,13 @@ def stats():
     """Renders the stats page."""
     players = ["mexico", "stephanie"]
     stats = get_stats()
-    #stat_tags = ["dumberrors", "firstorsecondover", "kills", "errors", "totalattacks", "assists", "assisterrors", "ace",
-    #             "serviceattempts", "serviceerrors", "receptionattempts", "receptionerrors", "dig"]
-    #stat_names = ["Dumb Errors", "1st or 2nd Over", "kills", "errors", "total attacks", "assists", "assist errors", "ace",
-    #              "service attempts", "service errors", "reception attempts", "reception errors", "dig", "dig errors",
-    #              "blocks", "block assists", "block errors"]
 
     if request.method == 'POST':
-        print("hey")
+        print("here")
+        #print(request.form['mexico-kills'])
+        #print(request.form)
+        #print(request.data)
+        print(request)
 
     return render_template(
         'stats.html',

@@ -18,8 +18,12 @@
         {% for player in players %}
         <tr>
             <td>{{player}}</td>
+            <!--
             {% for i in range(stats|length) %}
             <td></td>
+            {% endfor %}-->
+            {% for stat in stats %}
+            <td><input type="text" id="{{player}}-{{stat.tag}}" /></td>
             {% endfor %}
         </tr>
         {% endfor %}
