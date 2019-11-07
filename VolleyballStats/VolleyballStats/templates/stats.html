@@ -1,0 +1,31 @@
+﻿{% extends "layout.html" %}
+
+{% block content %}
+
+<h1>Stats</h1>
+
+<form method="post">
+    <label>Game Date:</label><input type="date" id="gamedate"/>
+    <table class="table table-striped table-bordered">
+        <thead>
+            <tr>
+                <th>Player</th>
+                {% for stat in stats %}
+                <th>{{stat.name}}</th>
+                {% endfor %}
+            </tr>
+        </thead>
+        {% for player in players %}
+        <tr>
+            <td>{{player}}</td>
+            {% for i in range(stats|length) %}
+            <td></td>
+            {% endfor %}
+        </tr>
+        {% endfor %}
+    </table>
+    <input type="submit" />
+</form>
+
+{% endblock %}
+
